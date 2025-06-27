@@ -2,30 +2,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import HeroBanner from "@/components/home/HeroBanner";
-import CategorySection from "@/components/home/CategorySection";
-import FeaturedProducts from "@/components/home/FeaturedProducts";
-import PopularProducts from "@/components/home/NewArrivalProducts";
-import NutritionCharts from "@/components/home/NutritionCharts";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Banner */}
-      <HeroBanner />
-
-      {/* Categories Section */}
-      <CategorySection />
-
-      {/* Featured Products */}
-      <FeaturedProducts />
-
-      {/* Nutrition Charts */}
-      <NutritionCharts />
-
-      {/* Popular Products */}
-      <PopularProducts />
-
       {/* CTA Section */}
       <section className="py-20 bg-primary/10">
         <div className="container-custom text-center">
