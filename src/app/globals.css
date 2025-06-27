@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 46, 46, 46; /* Dark Charcoal */
+  --background-rgb: 255, 251, 234; /* Soft Cream */
+  
+  /* ShadCN UI variables */
+  --background: 48 100% 96%;
+  --foreground: 0 0% 18%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 39 100% 48%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 100 62% 38%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 48 100% 96%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 9 100% 64%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 39 70% 90%;
+  --input: 39 70% 90%;
+  --ring: 39 100% 48%;
+  --chart-1: 39 100% 48%;
+  --chart-2: 100 62% 38%;
+  --chart-3: 9 100% 64%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.5rem;
+}
+
+/* Dark mode colors - keeping as reference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans; 
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary-hover text-primary-foreground font-medium rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-secondary hover:bg-secondary-hover text-secondary-foreground font-medium rounded-md transition-colors;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-foreground;
+  }
+  
+  .product-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg;
+  }
+  
+  .category-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-secondary/10 text-secondary;
+  }
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-on-scroll {
+    @apply opacity-0 transition-all duration-700 ease-in-out;
+  }
+  
+  .animate-on-scroll.show {
+    @apply opacity-100;
+  }
+}
