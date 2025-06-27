@@ -9,9 +9,9 @@ import { ReduxProvider } from "@/Provider/provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TazaFol | Fresh Seasonal Fruits in Bangladesh",
+  title: "Elevyze Gym",
   description:
-    "Buy the best quality seasonal fruits from all over Bangladesh with fast delivery and great prices.",
+    "Elevyze Gym is a gym management software that helps you manage your gym's membership and membership payments.",
 };
 
 export default function RootLayout({
